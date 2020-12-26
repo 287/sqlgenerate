@@ -538,7 +538,5 @@ var Generator = {
     }
 };
 
-module.exports = {
-    version         : require('./package.json').version,
-    generate        : (n) => Generator[n.type][n.variant](n)
-};
+export const version = require('./package.json').version;
+export const generate = (n) => Generator[n.type][n.variant](n);
